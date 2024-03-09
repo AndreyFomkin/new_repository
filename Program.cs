@@ -34,5 +34,29 @@ string [] NewArray (string [] arr, int max)
         }
     }    
     return newArray;
-}   
+} 
+
+void PrintArray (string [] array)
+{
+    Console.Write ("[");
+    for ( int i = 0; i < array.Length; i++)
+    {
+        Console.Write ('"');
+        Console.Write (array [i]);
+        Console.Write ('"');
+        if (i < array.Length - 1) 
+        Console.Write (",");
+    }
+    Console.Write ("]");
+}
+
+void Solution ( string [] arr, int max)
+{
+    string [] newArray = NewArray (arr, max);
+    PrintArray (arr);
+    Console.Write ("→");
+    PrintArray (newArray);
+    Console.WriteLine();
+}
+
 
