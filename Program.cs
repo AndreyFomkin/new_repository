@@ -19,3 +19,20 @@ int CountElements ( string [] arr, int max)
     }
     return count;
 }
+
+string [] NewArray (string [] arr, int max)
+{
+    int newArrayLength = CountElements (arr, max);
+    string [] newArray = new string [newArrayLength];
+    int newArrayIndex = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr [i].Length <= max)
+        {
+            newArray [newArrayIndex] = arr [i];
+            newArrayIndex++;
+        }
+    }    
+    return newArray;
+}   
+
